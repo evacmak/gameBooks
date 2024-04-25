@@ -3,6 +3,8 @@ class Game {
         this.startScreen = document.getElementById("game-intro")
         this.gameScreen = document.getElementById("game-screen")
         this.gameEndScreen = document.getElementById("game-end")
+        this.gameContainer = document.getElementById("game-container")
+
         this.player = new Player(this.gameScreen, 200, 500, 100, 150, "../Images/Girl.png");
         this.height = 600;
         this.width = 500;
@@ -19,6 +21,8 @@ class Game {
         this.level = 1; 
 
     }
+
+
     start(){
         this.gameScreen.style.width = `${this.width}px`
         this.gameScreen.style.height = `${this.height}px`
@@ -37,6 +41,8 @@ class Game {
         // Initialize the lives display 
         this.updateLivesDisplay();
     }
+
+    
     gameLoop(){
         console.log("gameLoop")
         this.update()
@@ -154,6 +160,11 @@ increaseLevel() {
         
             // Hide game screen
             this.gameScreen.style.display = "none";
+
+            // Hide game screen
+            this.gameContainer.style.display = "none";
+
+            
             // Show end game screen
             this.gameEndScreen.style.display = "block";
         }
