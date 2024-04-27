@@ -3,10 +3,10 @@ class Book {
         this.gameScreen = gameScreen
         this.left = Math.floor(Math.random() * 300 + 50) //aqui estamos a fazer a width da estrada para aparecer obstáculos e damos sempre margem de 50 do lado esquerdo para nao ir para a relva
         this.top = 0;
-        this.width = 100;
-        this.height = 150;
+        this.width = 80;
+        this.height = 70;
         this.element = document.createElement("img")
-        this.element.src = "../Images/book.png"
+        this.element.src = "../Images/379f1706d8c796af7a5a3dea9fde7285-removebg-preview.png"
           //Position the Book on the screen
           this.element.style.position = "absolute";
 
@@ -20,6 +20,7 @@ class Book {
   
           //When we create a Book, we are adding it to the div game-screen
           this.gameScreen.appendChild(this.element)
+
     }
 
     move(){

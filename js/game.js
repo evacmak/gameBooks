@@ -5,7 +5,7 @@ class Game {
         this.gameEndScreen = document.getElementById("game-end")
         this.gameContainer = document.getElementById("game-container")
 
-        this.player = new Player(this.gameScreen, 200, 500, 100, 150, "../Images/Girl.png");
+        this.player = new Player(this.gameScreen, 200, 500, 100, 150, "../Images/back.png");
         this.height = 600;
         this.width = 500;
         this.obstacles = [];
@@ -19,6 +19,7 @@ class Game {
         this.levelDisplay = document.getElementById("level-display");
         this.livesDisplay = document.getElementById("lives");
         this.level = 1; 
+        this.obstaclesToAdd = 1;
 
     }
 
@@ -29,7 +30,8 @@ class Game {
         //removing the start screen from the page
         this.startScreen.style.display = "none"
         //show the gameScreen
-        this.gameScreen.style.display = "block"
+        this.gameContainer.style.display = 'flex'
+        this.gameScreen.style.display = "flex"
 
         //start the loop
         this.gameIntervalId = setInterval(() => {
@@ -116,18 +118,20 @@ update() {
         }
     }
 
-    if (this.level === 4) { // Check if level is 4
-        this.endGame(); // End game if level is 4
+    if (this.level === 10) { // Check if level is 10
+        this.endGame(); // End game if level is 10
         return;
     }
 
-    if (Math.random() > 0.99 && this.books.length < 1) {
+    if (Math.random() > 0.5 && this.books.length < 2) {
         this.books.push(new Book(this.gameScreen));
     }
 
-    if (Math.random() > 0.99 && this.obstacles.length < 1) {
+
+    if (Math.random() > 0.8 && this.obstacles.length < this.obstaclesToAdd) {
         this.obstacles.push(new Obstacle(this.gameScreen));
     }
+
 
     this.updateScoreDisplay();
 }
@@ -138,10 +142,8 @@ increaseLevel() {
     this.score = 0;
 
     // Increase difficulty by adding more obstacles
-    const numObstaclesToAdd = 2; //Add 2 obstacles per level increase
-    for (let i = 0; i < numObstaclesToAdd; i++) {
-        this.obstacles.push(new Obstacle(this.gameScreen));
-    }
+    this.obstaclesToAdd++ ; //Add 2 obstacles per level increase
+   
     // Increase the level
     this.level++;
 

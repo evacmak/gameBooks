@@ -34,10 +34,10 @@ function handleKeyDown(event) {
         // Velocidade do player
         switch (key) {
             case "ArrowLeft":
-                game.player.directionX = -2;
+                game.player.directionX = -3;
                 break;
             case "ArrowRight":
-                game.player.directionX = 2;
+                game.player.directionX = 3;
                 break;
         }
     }

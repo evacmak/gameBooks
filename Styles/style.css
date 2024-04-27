@@ -1,10 +1,17 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+
+
 body {
-    padding: 0%;
+    padding: 0;
     text-align: center;
     font-family: "Pixelify Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    margin: 0;
 
 }
 
@@ -12,16 +19,23 @@ body {
   background: rgb(227,236,255);
   background: linear-gradient(90deg, rgba(227,236,255,1) 0%, rgba(255,221,252,1) 50%, rgba(255,243,226,1) 100%);
   border: none;
-  padding: 0%;
-  border: 0cap;
+  padding: 0;
+  height: 100vh;
+ 
 }
 
 #game-intro h1 {
-  font-size: 80px
+  font-size: 100px;
+  margin: 0;
 }
 
 #game-intro div {
   font-size: 25px
+}
+
+#image-tbr {
+  height: 200px;
+  width: auto;
 }
 
 #start-button:hover {
@@ -44,23 +58,34 @@ body {
 
 
   #game-container {
-    display: flex;
+    display: none;
     width: 100vw;
-    padding: 20px 0px;
+    height: 100vh;
+    padding: 0px;
     justify-content: center;
     background: rgb(227,236,255);
     background: linear-gradient(90deg, rgba(227,236,255,1) 0%, rgba(255,221,252,1) 50%, rgba(255,243,226,1) 100%);
     border: none;
+    justify-content: center;
+    align-items: center;
   }
+
+  #scores {
+    text-align: center; /* Aligns the text content to the left */
+    margin-right: 250px; /* Adds some spacing between the scores and the game screen */
+}
+
   
   #game-screen {
     display: none;
     align-content: center;
-    padding: 20px 0px;
+    padding: 0;
     overflow: hidden;
     position: relative;
     background-image: url(../Images/GameBackground.png);
     background-size: cover;
+    width: 300px; /* Adjust the width of the game screen as needed */
+    height: 200px;
   }
   
   @keyframes slide {
@@ -77,7 +102,8 @@ body {
 
 
 #game-container h2 {
-  font-size: 80px
+  font-size: 80px;
+  margin: 0;
 }
 
 #game-container div {
@@ -86,11 +112,20 @@ body {
 
 #game-end {
   display: none;
-  font-size: 70px
+  font-size: 70px;
+  background: rgb(227,236,255);
+  background: linear-gradient(90deg, rgba(227,236,255,1) 0%, rgba(255,221,252,1) 50%, rgba(255,243,226,1) 100%);
+  border: none;
+  padding: 0;
+  height: 100vh;
+  border: none;
+  align-items: center;
+
+  /* flex-direction: column; */
 }
 
 #game-end h1 {
-  margin-bottom: 15px;
+  margin: 0;
 }
 
 #restart-button:hover {
@@ -108,4 +143,9 @@ body {
   font-weight: 500;
   font-style: normal;
   font-size: 30px
+}
+
+#end-image {
+  width: 300px;
+  height: auto;
 }

@@ -3,10 +3,10 @@ class Obstacle {
         this.gameScreen = gameScreen
         this.left = Math.floor(Math.random() * 300 + 50) //aqui estamos a fazer a width da estrada para aparecer obstáculos e damos sempre margem de 50 do lado esquerdo para nao ir para a relva
         this.top = 0;
-        this.width = 100;
-        this.height = 150;
+        this.width = 60;
+        this.height = 80;
         this.element = document.createElement("img")
-        this.element.src = "../Images/bookshop.png"
+        this.element.src = "../Images/shopping_stand_in_pixel_art_style_Stock_Vector-removebg-preview.png"
           //Position the obstacle on the screen
           this.element.style.position = "absolute";
 

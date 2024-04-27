@@ -13,20 +13,28 @@
     <main>
         <!-- game-intro -->
         <div id="game-intro">
+            <br>
+            <br>
+            <br>
+            <br>
             <h1>TBR GAME</h1>
-            <div><b>Rules:</b> Read as many books as you can from your TBR and avoid to buy more book on the bookshops.</div>
+            <br>
+            <img id="image-tbr" src="../Images/endless_tbr-removebg-preview.png" alt="endlessTbrImage">
+            <br>
+            <div><b>Rules:</b> Read as many books as you can from your TBR and avoid to buy more books on the bookshops.</div>
             <div>Everytime you collide with a bookshop you lose a life.</div>
             <div>You only have 3 lives.</div>
             <div><b>Good Luck!</b> </div>
+            <br>
             <button id="start-button"> Start </button>
         </div>
 
         <!-- game-screen -->
         <div id="game-container">
-            <div>
+            <div id="scores">
               <h2>Stats</h2>
-              <div id="lives">Level: 3</div>
               <div id="score-display">Score: 0</div>
+              <div id="lives">Lives: 10</div>
               <div id="level-display">Level: 1</div>
             </div>
             
@@ -36,9 +44,11 @@
         <!-- game-end -->
 
         <div id="game-end">
-            <img src="./images/logo.png" alt="" class="logo-img" />
+            <!-- <img src="./images/logo.png" alt="" class="logo-img" /> -->
+            <br>
             <h1>Game Over</h1>
-            <br />
+            <img id="end-image" src="../Images/death_by_tbr-removebg-preview.png" alt="deathByTbrImage">
+            <br>
             <button id="restart-button">Restart</button>
           </div>
 
