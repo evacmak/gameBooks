@@ -39,10 +39,9 @@ class Player {
         });
         //key up Image
         document.addEventListener('keyup', (event) => {
-            if (event.key === 'keyup') {
                 this.element.src = "../Images/back.png";
             }
-        });
+        );
     }
 
     move(){
