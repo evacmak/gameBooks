@@ -4,7 +4,6 @@ class Game {
         this.gameScreen = document.getElementById("game-screen")
         this.gameEndScreen = document.getElementById("game-end")
         this.gameContainer = document.getElementById("game-container")
-
         this.player = new Player(this.gameScreen, 200, 500, 100, 150, "../Images/back.png");
         this.height = 600;
         this.width = 500;
@@ -118,8 +117,8 @@ update() {
         }
     }
 
-    if (this.level === 10) { // Check if level is 10
-        this.endGame(); // End game if level is 10
+    if (this.level === 20) { // Check if level is 20
+        this.endGame(); // End game if level is 20
         return;
     }
 

@@ -24,6 +24,25 @@ class Player {
 
         //When we create a player, we are adding it to the div game-screen
         this.gameScreen.appendChild(this.element)
+
+        //Left arrow Image
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowLeft') {
+                this.element.src = "../Images/left.png";
+            }
+        });
+        //Right arrow Image
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowRight') {
+                this.element.src = "../Images/right.png";
+            }
+        });
+        //key up Image
+        document.addEventListener('keyup', (event) => {
+            if (event.key === 'keyup') {
+                this.element.src = "../Images/back.png";
+            }
+        });
     }
 
     move(){
